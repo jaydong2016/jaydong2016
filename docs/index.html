@@ -26,25 +26,28 @@
     }
 
     #loader {
+      text-align: center;
+      position: fixed;
+      z-index: 3;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      visibility: hidden;
+      background-color: rgba(255, 255, 255, .95);
       display: flex;
       align-items: center;
       justify-content: center;
-      position: fixed;
-      z-index: 3;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(255, 255, 255, 0.95);
     }
 
-    #loader:before {
-      content: "";
+    #loader div {
       width: 50px;
       height: 50px;
+      display: inline-block;
       border-radius: 50%;
-      border: 5px solid #91bdff;
-      border-top-color: transparent;
+      border: 5px solid transparent;
+      border-top-color: #91bdff;
       animation: spin 1s linear infinite;
     }
 
@@ -53,15 +56,9 @@
         transform: rotate(360deg);
       }
     }
-
-    /* 移除自定义的进度条样式 */
-    #bar {
-      display: none;
-    }
   </style>
 </head>
 <body>
-  <div id="bar"></div>
   <div class="page home">
     <div>
       <div id="user"></div>
