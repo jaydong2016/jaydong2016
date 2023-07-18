@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="shortcut icon" href="https://raw.githubusercontent.com/jaydong2016/NotionNext/new0625/public/favicon.ico" />
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
   <title>不是博客</title>
   <style>
     body {
@@ -36,19 +36,17 @@
       opacity: 0;
       visibility: hidden;
       background-color: rgba(255, 255, 255, .95);
-      display: flex;
-      align-items: center;
-      justify-content: center;
     }
 
-    #loader div {
-      width: 50px;
-      height: 50px;
+    #loader::before {
+      content: "";
       display: inline-block;
+      width: 64px;
+      height: 64px;
       border-radius: 50%;
-      border: 5px solid transparent;
-      border-top-color: #91bdff;
-      animation: spin 1s linear infinite;
+      border: 6px solid #91bdff;
+      border-top-color: transparent;
+      animation: spin 1.5s linear infinite;
     }
 
     @keyframes spin {
@@ -71,7 +69,7 @@
       <div id="comments"></div>
     </div>
   </div>
-  <div id="loader"><div></div></div>
+  <div id="loader"></div>
   <script src="./index.92ae90d1.js"></script>
 </body>
 </html>
